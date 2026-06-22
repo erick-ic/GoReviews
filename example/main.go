@@ -2,6 +2,27 @@ package main
 
 import "fmt"
 
+func getPeachNum(d int) int {
+	//day10: 1
+	//day9: (day10 + 1) * 2
+	if d > 10 || d < 0 {
+		fmt.Println("getPeachNum fail")
+		return 0
+	}
+	if d == 10 {
+		return 1
+	} else {
+		return (getPeachNum(d+1) + 1) * 2
+	}
+
+}
+
+func swap(n1, n2 *int) {
+	t := *n1
+	*n1 = *n2
+	*n2 = t
+}
+
 func main() {
 	////1.两个变量，取值互换
 	//a := 1
@@ -65,8 +86,8 @@ func main() {
 	//	for i := 1; i <= 5; i++ {
 	//		var score float64
 	//		fmt.Printf("请输入第%d个班级第%d个学生成绩：", j, i)
-	//		_, err := fmt.Scanln(&score)
-	//		if err != nil {
+	//		_, error := fmt.Scanln(&score)
+	//		if error != nil {
 	//			return
 	//		}
 	//		fmt.Println(score)
@@ -190,16 +211,28 @@ func main() {
 	//	}
 	//}
 
-	//8.10以内的奇数-for循环+continue
-	for i := 0; i < 10; i++ {
-		if i%2 == 0 {
-			continue
-		}
-		fmt.Println("i:", i)
-	}
-	//i: 1
-	//i: 3
-	//i: 5
-	//i: 7
-	//i: 9
+	////8.10以内的奇数-for循环+continue
+	//for i := 0; i < 10; i++ {
+	//	if i%2 == 0 {
+	//		continue
+	//	}
+	//	fmt.Println("i:", i)
+	//}
+	////i: 1
+	////i: 3
+	////i: 5
+	////i: 7
+	////i: 9
+
+	////9.猴子吃桃子问题：有一堆桃子，猴子第一天吃一半，并多吃了一个，以后每天猴子都吃剩余的一半，并多吃一个。
+	////当第10天时，再想吃时（还没吃），发现只有1个桃子了，问最初有多少桃子？
+	//fmt.Printf("getPeachNum:%v \n", getPeachNum(1))
+	//// getPeachNum:1534
+
+	//10.编写函数swap(n1 *int, n2 *int) 可以交换n1、n2的值
+	a := 10
+	b := 20
+	swap(&a, &b)
+	fmt.Printf("a: %v, b: %v \n", a, b)
+	//a: 20, b: 10
 }

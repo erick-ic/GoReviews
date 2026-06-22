@@ -5,8 +5,8 @@ import "fmt"
 func main() {
 	//var key byte
 	//fmt.Println("请输入一个0-9的数字:")
-	//_, err := fmt.Scanf("%d", &key)
-	//if err != nil {
+	//_, error := fmt.Scanf("%d", &key)
+	//if error != nil {
 	//	return
 	//}
 	//
