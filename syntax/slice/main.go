@@ -171,4 +171,5 @@ func main() {
 	fbnSlice := fbn(3)
 	fmt.Printf("%v, %T\n", fbnSlice, fbnSlice)
 	//[1 1 2], []uint64
+
 }
