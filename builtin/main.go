@@ -26,5 +26,5 @@ func main() {
 	//num2 = 0x237ca4f300d0, type = *int, address = 0x237ca4f20040, 指向的值 = 21
 
 	//(2)make方法：
-	//使用场景：分配内存。主要用来分配引用类型，如channel、map、slice等
+	//使用场景：分配内存。只能用于分配引用类型，如channel、map、slice。
 }
