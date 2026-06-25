@@ -95,7 +95,7 @@ func main() {
 	fmt.Printf("%#v, %T\n", p5, p5)
 	//main.Person{Name:"Jack", Age:0, Gender:""}, main.Person
 
-	//方式6:
+	//方式6: 不推荐
 	p6 := Person{
 		"Jack",
 		28,

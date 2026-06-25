@@ -28,6 +28,12 @@ func calculate(a, b float64, operate byte) float64 {
 	return result
 }
 
+func testReturnValue() (name string, age int) {
+	name = "Jack"
+	age = 21
+	return
+}
+
 func recursion(n int) {
 	if n > 2 {
 		n--
@@ -81,6 +87,11 @@ func main() {
 
 	fmt.Printf("%.2f \n", calculate(1.1, 2.2, '+'))
 	//3.30
+
+	//返回值
+	res1, res2 := testReturnValue()
+	fmt.Printf("res1: %s, res2: %d \n", res1, res2)
+	//res1: Jack, res2: 21
 
 	//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>2.包的使用>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 	newUtils.SayHello("Jack")

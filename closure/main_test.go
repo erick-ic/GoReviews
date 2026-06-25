@@ -22,3 +22,47 @@ func TestMakeSuffix(t *testing.T) {
 	fmt.Println(f("winter"))     // winter.jpg
 	fmt.Println(f("spring.jpg")) //spring.jpg
 }
+
+func TestDeferClosureLoopV1(t *testing.T) {
+	//每次迭代都会 重新声明一个新的 i 变量（作用域为本次循环体），
+	//每个 defer 闭包捕获的是本次迭代独立的 i
+	DeferClosureLoopV1()
+	//9
+	//8
+	//7
+	//6
+	//5
+	//4
+	//3
+	//2
+	//1
+	//0
+}
+
+func TestDeferClosureLoopV2(t *testing.T) {
+	DeferClosureLoopV2()
+	//9
+	//8
+	//7
+	//6
+	//5
+	//4
+	//3
+	//2
+	//1
+	//0
+}
+
+func TestDeferClosureLoopV3(t *testing.T) {
+	DeferClosureLoopV3()
+	//9
+	//9
+	//9
+	//9
+	//9
+	//9
+	//9
+	//9
+	//9
+	//9
+}

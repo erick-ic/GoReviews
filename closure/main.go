@@ -1,6 +1,7 @@
 package closure
 
 import (
+	"fmt"
 	"strings"
 )
 
@@ -38,4 +39,30 @@ func makeSuffix(suffix string) func(string) string {
 			return name
 		}
 	*/
+}
+
+func DeferClosureLoopV1() {
+	for i := 0; i < 10; i++ {
+		defer func() {
+			fmt.Println(i)
+		}()
+	}
+}
+
+func DeferClosureLoopV2() {
+	for i := 0; i < 10; i++ {
+		defer func(val int) {
+			fmt.Println(val)
+		}(i)
+	}
+}
+
+func DeferClosureLoopV3() {
+	var j int
+	for i := 0; i < 10; i++ {
+		j = i
+		defer func() {
+			fmt.Println(j)
+		}()
+	}
 }
