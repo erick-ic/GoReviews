@@ -105,7 +105,7 @@ func calcuFactorial1(n int) {
 	//缺乏互斥保护机制，存在资源竞争
 	myMap[n] = res
 	//fatal error: concurrent map writes
-	//编译时，添加-race参数可查看具体情况，即go build -race main.go
+	//编译时，添加-race参数可查看具体情况，即go build -race client.go
 	//查看：./main
 	//资源竞争报错：WARNING: DATA RACE
 }

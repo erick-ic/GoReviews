@@ -37,9 +37,9 @@ func TestAddUpper(t *testing.T) {
 
 //===============================(2)测试单个文件===============================
 //命令行：go test -v 单元测试文件 被测试员文件
-//如：go test -v main_test.go main.go
+//如：go test -v main_test.go client.go
 
-//erick@erickdeMacBook-Pro testing % go test -v main_test.go main.go
+//erick@erickdeMacBook-Pro testing % go test -v main_test.go client.go
 //=== RUN   TestAddUpper
 //main_test.go:31: Add Upper success
 //--- PASS: TestAddUpper (0.00s)

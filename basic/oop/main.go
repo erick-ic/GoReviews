@@ -1,7 +1,7 @@
 package main
 
 import (
-	"GoReviews/oop/model"
+	"GoReviews/basic/oop/model"
 	"fmt"
 )
 

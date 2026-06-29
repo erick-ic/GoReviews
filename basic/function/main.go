@@ -1,7 +1,7 @@
 package main
 
 import (
-	newUtils "GoReviews/utils"
+	newUtils "GoReviews/basic/utils"
 	"fmt"
 )
 
